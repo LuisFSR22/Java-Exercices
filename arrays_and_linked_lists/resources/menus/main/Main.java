@@ -1,14 +1,18 @@
 package arrays_and_linked_lists.resources.menus.main;
 
 import arrays_and_linked_lists.resources.menus.options.MainOptions;
+import arrays_and_linked_lists.resources.menus.options.interfaces.ClearConsoleInterface;
+
 import java.util.Scanner;
 
-public class Main {
+public class Main implements ClearConsoleInterface {
 
     public static int[] numbers;
     public static String[] names;
     
     public static void menuInterface() {
+
+        ClearConsoleInterface.clearConsole();
 
         System.out.println(" ------------------");
         System.out.println("|  Arrays Machine  |");

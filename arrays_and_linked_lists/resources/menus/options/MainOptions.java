@@ -5,12 +5,15 @@ import arrays_and_linked_lists.resources.menus.options.actions.Delete;
 import arrays_and_linked_lists.resources.menus.options.actions.Insert;
 import arrays_and_linked_lists.resources.menus.options.actions.Show;
 import arrays_and_linked_lists.resources.menus.options.actions.Edit;
+import arrays_and_linked_lists.resources.menus.options.interfaces.ClearConsoleInterface;
 
 import java.util.Scanner;
 
-public class MainOptions {
+public class MainOptions implements ClearConsoleInterface {
 
     public static void menuOptionsInterface() {
+
+        ClearConsoleInterface.clearConsole();
 
         System.out.println(" --------------------");
         System.out.println("|  Arrays Machine    |");

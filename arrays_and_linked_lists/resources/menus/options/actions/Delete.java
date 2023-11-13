@@ -2,6 +2,7 @@ package arrays_and_linked_lists.resources.menus.options.actions;
 
 import arrays_and_linked_lists.resources.menus.main.Main;
 import arrays_and_linked_lists.resources.menus.options.MainOptions;
+import arrays_and_linked_lists.resources.menus.options.interfaces.ClearConsoleInterface;
 import arrays_and_linked_lists.resources.menus.options.interfaces.SelectArrayTypeInterface;
 import java.util.Scanner;
 
@@ -9,6 +10,7 @@ public class Delete implements SelectArrayTypeInterface {
 
     public static void menuDeleteArraysInterface() {
 
+        ClearConsoleInterface.clearConsole();
         SelectArrayTypeInterface.menuInsertArraysInterface();
         switchArrayMenu();
     }

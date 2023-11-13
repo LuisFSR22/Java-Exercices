@@ -2,13 +2,15 @@ package arrays_and_linked_lists.resources.menus.options.actions;
 
 import arrays_and_linked_lists.resources.menus.main.Main;
 import arrays_and_linked_lists.resources.menus.options.MainOptions;
+import arrays_and_linked_lists.resources.menus.options.interfaces.ClearConsoleInterface;
 import arrays_and_linked_lists.resources.menus.options.interfaces.SelectArrayTypeInterface;
 import java.util.Scanner;
 
 public class Insert implements SelectArrayTypeInterface {
 
     public static void menuInsertArraysInterface() {
-
+    
+        ClearConsoleInterface.clearConsole();
         SelectArrayTypeInterface.menuInsertArraysInterface();
         switchArrayMenu();
     }
@@ -57,7 +59,6 @@ public class Insert implements SelectArrayTypeInterface {
             Scanner value = new Scanner(System.in);
             System.out.print("Enter a number: ");
             myArray[i] = value.nextInt();
-            System.out.println("You entered: " + myArray[i]);
         }
         return myArray;
     }
@@ -69,7 +70,6 @@ public class Insert implements SelectArrayTypeInterface {
             Scanner value = new Scanner(System.in);
             System.out.print("Enter a name: ");
             myArray[i] = value.nextLine();
-            System.out.println("You entered: " + myArray[i]);
         }
         return myArray;
     }

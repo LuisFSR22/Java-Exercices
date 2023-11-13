@@ -1,15 +1,17 @@
 package arrays_and_linked_lists.resources.menus.options.actions.editactions;
 
-import java.util.Arrays;
 import java.util.Scanner;
 
-public class EditValue {
+import arrays_and_linked_lists.resources.menus.options.interfaces.ClearConsoleInterface;
+import arrays_and_linked_lists.resources.menus.options.interfaces.TitleDisplayInterface;
+
+public class EditValue implements TitleDisplayInterface, ClearConsoleInterface {
 
     public static void editIntArrays(int[] array) {
         try {
-            System.out.println(" ___________________");
-            System.out.println("| Number Array List |");
-            System.out.println("|-------------------|");
+            ClearConsoleInterface.clearConsole();
+            TitleDisplayInterface.numbersTitleDisplay();
+
             for (int i = 0; i < array.length; i++) {
                 System.out.println("| " + (i + 1) + " -> " + array[i] + " ");
             }
@@ -29,9 +31,9 @@ public class EditValue {
 
     public static void editStringArrays(String[] array) {
         try {
-            System.out.println(" ___________________");
-            System.out.println("| Names Array List  |");
-            System.out.println("|-------------------|");
+            ClearConsoleInterface.clearConsole();
+            TitleDisplayInterface.namesTitleDisplay();
+
             for (int i = 0; i < array.length; i++) {
                 System.out.println("| " + (i + 1) + " -> " + array[i] + " ");
             }
@@ -55,7 +57,7 @@ public class EditValue {
         System.out.println("|-------------------|");
 
         Scanner value = new Scanner(System.in);
-        System.out.print("Chose an option: ");
+        System.out.print("Chose an option to edit: ");
 
         return value.nextInt();
 

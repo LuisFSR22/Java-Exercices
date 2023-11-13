@@ -1,17 +1,19 @@
 package arrays_and_linked_lists.resources.menus.options;
 
 import arrays_and_linked_lists.resources.menus.main.Main;
-import arrays_and_linked_lists.resources.menus.options.actions.Delete;
-import arrays_and_linked_lists.resources.menus.options.actions.Insert;
-import arrays_and_linked_lists.resources.menus.options.actions.Show;
+import arrays_and_linked_lists.resources.menus.options.actions.editactions.InsertValue;
+import arrays_and_linked_lists.resources.menus.options.actions.editactions.DeleteValue;
 import arrays_and_linked_lists.resources.menus.options.actions.editactions.EditValue;
 import arrays_and_linked_lists.resources.menus.options.actions.editactions.SortArray;
+import arrays_and_linked_lists.resources.menus.options.interfaces.ClearConsoleInterface;
 
 import java.util.Scanner;
 
-public class EditOptions {
+public class EditOptions implements ClearConsoleInterface{
 
     public static void menuOptionsInterface(String arrayType) {
+
+        ClearConsoleInterface.clearConsole();
 
         System.out.println(" --------------------");
         System.out.println("|  Arrays Machine    |");
@@ -46,7 +48,25 @@ public class EditOptions {
                 break;
 
             case 2:
-                Insert.menuInsertArraysInterface();
+                if (arrayType == "int") {
+                    InsertValue.insertIntValueArrays(Main.numbers);
+                }
+
+                else if (arrayType == "string") {
+                    InsertValue.insertStringValueArrays(Main.names);
+                }
+                menuOptionsInterface(arrayType);
+                break;
+
+            case 3:
+                if (arrayType == "int") {
+                    DeleteValue.deleteValueIntArrays(Main.numbers);
+                }
+
+                else if (arrayType == "string") {
+                    DeleteValue.deleteValueStringArrays(Main.names);
+                }
+                menuOptionsInterface(arrayType);
                 break;
 
             case 4:

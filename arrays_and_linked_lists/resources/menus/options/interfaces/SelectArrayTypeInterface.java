@@ -1,10 +1,5 @@
 package arrays_and_linked_lists.resources.menus.options.interfaces;
 
-import java.util.Scanner;
-
-import arrays_and_linked_lists.resources.menus.main.Main;
-import arrays_and_linked_lists.resources.menus.options.MainOptions;
-
 public interface SelectArrayTypeInterface {
     
     public static void menuInsertArraysInterface() {
