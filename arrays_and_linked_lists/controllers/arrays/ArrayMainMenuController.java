@@ -1,11 +1,10 @@
-package arrays_and_linked_lists.resources.menus.main;
-
-import arrays_and_linked_lists.resources.menus.options.MainOptions;
-import arrays_and_linked_lists.resources.menus.options.interfaces.ClearConsoleInterface;
+package arrays_and_linked_lists.controllers.arrays;
 
 import java.util.Scanner;
 
-public class Main implements ClearConsoleInterface {
+import arrays_and_linked_lists.interfaces.ClearConsoleInterface;
+
+public class ArrayMainMenuController implements ClearConsoleInterface {
 
     public static int[] numbers;
     public static String[] names;
@@ -33,7 +32,7 @@ public class Main implements ClearConsoleInterface {
         switch (option) {
             case 1:
                 System.out.println("Let's start!");
-                MainOptions.menuOptionsInterface();
+                ArrayOptionsController.menuOptionsInterface();
                 break;
 
             case 0:
