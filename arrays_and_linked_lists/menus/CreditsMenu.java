@@ -1,14 +1,10 @@
-package arrays_and_linked_lists.controllers;
+package arrays_and_linked_lists.menus;
 
-import java.util.Scanner;
+public class CreditsMenu extends MenuBase{
 
-import arrays_and_linked_lists.interfaces.ClearConsoleInterface;
+    public void showMenu() {
 
-public class CreditsCrontroller {
-
-    public static void creditsMenuInterface() {
-
-        ClearConsoleInterface.clearConsole();
+        clearConsole();
 
         System.out.println(" --------------------------");
         System.out.println("|  Arrays && Linked Lists  |");
@@ -20,25 +16,25 @@ public class CreditsCrontroller {
         System.out.println("|  0 -> Exit               |");
         System.out.println("|__________________________|");
 
-        creditsMenuOptions();
+        switchOption(isInt);
     }
 
-    private static void creditsMenuOptions() {
+    public void switchOption(boolean isInt) {
 
-        Scanner value = new Scanner(System.in);
-        System.out.print("Chose an option: ");
-        int option = value.nextInt();
+        int option = inputOption(3);
 
         switch (option) {
             case 0:
-                StartMenuController.mainMenuInterface();
+                MenuInterface mainMenu = new MainMenu();
+                mainMenu.showMenu();
                 return;
 
             default:
                 System.out.println("Invalid Option. Let's try again!");
-                creditsMenuOptions();
+                showMenu();
                 break;
         }
+
     }
 
 }

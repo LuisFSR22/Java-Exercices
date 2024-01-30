@@ -2,10 +2,10 @@ package arrays_and_linked_lists.controllers.arrays;
 
 import java.util.Scanner;
 
-import arrays_and_linked_lists.controllers.StartMenuController;
 import arrays_and_linked_lists.interfaces.ClearConsoleInterface;
 import arrays_and_linked_lists.interfaces.SelectArrayTypeInterface;
 import arrays_and_linked_lists.interfaces.TitleDisplayInterface;
+import arrays_and_linked_lists.menus.MainMenu;
 
 public class ArrayOptionsController implements ClearConsoleInterface {
 
@@ -53,7 +53,7 @@ public class ArrayOptionsController implements ClearConsoleInterface {
                 break;
 
             case 0:
-                StartMenuController.choseArrayLinkedListsInterface();
+                MainMenu.choseArrayLinkedListsInterface();
                 break;
 
             default:

@@ -3,27 +3,9 @@ package arrays_and_linked_lists.controllers.arrays;
 import java.util.Arrays;
 import java.util.Scanner;
 
-import arrays_and_linked_lists.interfaces.ClearConsoleInterface;
 import arrays_and_linked_lists.interfaces.TitleDisplayInterface;
 
-public class ArrayEditController implements ClearConsoleInterface {
-
-    public static void menuOptionsInterface(String arrayType) {
-
-        ClearConsoleInterface.clearConsole();
-
-        System.out.println(" --------------------");
-        System.out.println("|  Arrays Machine    |");
-        System.out.println("|--------------------|");
-        System.out.println("|  1 -> Edit Value   |");
-        System.out.println("|  2 -> Add Value    |");
-        System.out.println("|  3 -> Delete Value |");
-        System.out.println("|  4 -> Sort Array   |");
-        System.out.println("|  0 -> Back         |");
-        System.out.println("|____________________|");
-
-        switchOptionMenu(arrayType);
-    }
+public class ArrayEditController {
 
     // Switch Array Menu Option //
 

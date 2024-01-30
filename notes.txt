@@ -1,6 +1,13 @@
+Notes
+
+Defenir String/Int uma unica vez no inicio
+Defenir um Boolean isInt (true se for int/false se for string) para usar depois
+
+
 Completed:
 Everything about Arrays
 Update main menu to include arrays and linked lists
 
 Incompleted:
+Project Structure (Implementing Interfaces and Abstract Classes)
 Implement Linked Lists
