@@ -1,0 +1,6 @@
+Completed:
+Everything about Arrays
+
+Incompleted:
+Implement Linked Lists
+Update main menu to include arrays and linked lists
