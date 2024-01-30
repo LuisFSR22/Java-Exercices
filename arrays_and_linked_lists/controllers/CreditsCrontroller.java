@@ -31,6 +31,7 @@ public class CreditsCrontroller {
 
         switch (option) {
             case 0:
+                StartMenuController.mainMenuInterface();
                 return;
 
             default:
