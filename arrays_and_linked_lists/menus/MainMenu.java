@@ -14,10 +14,10 @@ public class MainMenu extends MenuBase {
         System.out.println("|  0 -> Exit               |");
         System.out.println("|__________________________|");
 
-        switchOption(isInt);
+        switchOption();
     }
 
-    public void switchOption(boolean isInt) {
+    public void switchOption() {
 
         int option = inputOption(3);
 
@@ -41,6 +41,5 @@ public class MainMenu extends MenuBase {
                 showMenu();
                 break;
         }
-
     }
 }

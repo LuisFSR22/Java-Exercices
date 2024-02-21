@@ -2,6 +2,11 @@ package arrays_and_linked_lists.menus;
 
 public class SelectArrayTypeMenu extends MenuBase {
 
+    public SelectArrayTypeMenu(MenuInterface previousMenu){
+        nextMenu =  new ArrayOptionsMenu(this);
+        this.previousMenu = previousMenu;
+    }
+
     public void showMenu() {
 
         clearConsole();
@@ -14,35 +19,33 @@ public class SelectArrayTypeMenu extends MenuBase {
         System.out.println("|  0 -> Back         |");
         System.out.println("|____________________|");
 
-        switchOption(isInt);
+        switchOption();
 
     }
 
-    public void switchOption(boolean isInt) {
+    public void switchOption() {
 
         int option = inputOption(3);
-        MenuInterface arrayOptionsMenu = new ArrayOptionsMenu();
-
+        
         switch (option) {
 
             case 1:
                 isInt = true;
-                arrayOptionsMenu.showMenu();
+                nextMenu.showMenu();
                 break;
 
             case 2:
                 isInt = false;
-                arrayOptionsMenu.showMenu();
+                nextMenu.showMenu();
                 break;
                 
             case 0:
-                MenuInterface selectListType = new SelectListType();
-                selectListType.showMenu();
+                previousMenu.showMenu();
                 break;
 
             default:
                 System.out.println("Invalid Option. Let's try again!");
-                switchOption(isInt);
+                switchOption();
                 break;
         }
     }

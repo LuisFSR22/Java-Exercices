@@ -1,6 +1,12 @@
 package arrays_and_linked_lists.menus;
 
+import arrays_and_linked_lists.menus.array_options.InsertArrayMenu;
+
 public class ArrayOptionsMenu extends MenuBase {
+
+    public ArrayOptionsMenu(MenuInterface previousMenu) {
+        this.previousMenu = previousMenu;
+    }
 
     public void showMenu() {
 
@@ -9,25 +15,24 @@ public class ArrayOptionsMenu extends MenuBase {
         System.out.println(" --------------------");
         System.out.println("|  Arrays Machine    |");
         System.out.println("|--------------------|");
-        System.out.println("|  1 -> Show Array   |");
-        System.out.println("|  2 -> Insert Array |");
+        System.out.println("|  1 -> Insert Array |");
+        System.out.println("|  2 -> Show Array   |");
         System.out.println("|  3 -> Edit Array   |");
         System.out.println("|  4 -> Delete Array |");
         System.out.println("|  0 -> Back         |");
         System.out.println("|____________________|");
         System.out.println("|IsInt: " + isInt);
 
-
-        switchOption(isInt);
+        switchOption();
     }
 
-    public void switchOption(boolean isInt) {
+    public void switchOption() {
 
         int option = inputOption(4);
 
         switch (option) {
             case 1:
-
+                showMenuOption(new InsertArrayMenu(this));
                 break;
 
             case 2:
@@ -43,8 +48,7 @@ public class ArrayOptionsMenu extends MenuBase {
                 break;
 
             case 0:
-                MenuInterface selectArrayTypeMenu = new SelectArrayTypeMenu();
-                selectArrayTypeMenu.showMenu();
+                previousMenu.showMenu();
                 break;
 
             default:
@@ -52,6 +56,9 @@ public class ArrayOptionsMenu extends MenuBase {
                 showMenu();
                 break;
         }
+    }
 
+    private void showMenuOption(MenuInterface menu) {
+        menu.showMenu();
     }
 }

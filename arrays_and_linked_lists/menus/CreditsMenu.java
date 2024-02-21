@@ -2,6 +2,10 @@ package arrays_and_linked_lists.menus;
 
 public class CreditsMenu extends MenuBase{
 
+    public CreditsMenu() {
+        previousMenu = new MainMenu();
+    }
+
     public void showMenu() {
 
         clearConsole();
@@ -16,17 +20,16 @@ public class CreditsMenu extends MenuBase{
         System.out.println("|  0 -> Exit               |");
         System.out.println("|__________________________|");
 
-        switchOption(isInt);
+        switchOption();
     }
 
-    public void switchOption(boolean isInt) {
+    public void switchOption() {
 
-        int option = inputOption(3);
+        int option = inputOption(0);
 
         switch (option) {
             case 0:
-                MenuInterface mainMenu = new MainMenu();
-                mainMenu.showMenu();
+                previousMenu.showMenu();
                 return;
 
             default:
